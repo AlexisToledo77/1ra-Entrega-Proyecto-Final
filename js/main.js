@@ -10,6 +10,7 @@ const productos = [
     {nombre: "Cartel Neon 7", precio: 25999, id:7},
 ];
 let carrito = []
+console.log (productos);
 
 let seleccion = prompt ("¿Desea adquirir algún producto?")
 
@@ -32,31 +33,31 @@ while (seleccion != "no"){
 
         switch (producto) {
             case "1":
-                precio = 19999;
+                precio = productos[0].precio;
                 alert("Agregaste el cartel numero 1 al carrito");
                 break;
             case "2":
-                precio = 21999;
+                precio =  productos[1].precio;
                 alert("Agregaste el cartel numero 2 al carrito");
                 break;
             case "3":
-                precio = 22999;
+                precio = productos[2].precio;
                 alert("Agregaste el cartel numero 3 al carrito");
                 break;
             case "4":
-                precio = 22999;
+                precio =  productos[3].precio;
                 alert("Agregaste el cartel numero 4 al carrito");
                 break;
             case "5":
-                precio = 22999;
+                precio = productos[4].precio;
                 alert("Agregaste el cartel numero 5 al carrito");
                 break;
             case "6":
-                precio = 23999;
+                precio = productos[5].precio;
                 alert("Agregaste el cartel numero 6 al carrito");
                 break;
             case "7":
-                precio = 25999;
+                precio = productos[6].precio;
                 alert("Agregaste el cartel numero 7 al carrito");
                 break;
             default:
