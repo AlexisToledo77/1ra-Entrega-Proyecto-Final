@@ -8,9 +8,7 @@ const productos = [
     {nombre: "Cartel Neon 5", precio: 22999, id:5},
     {nombre: "Cartel Neon 6", precio: 23999, id:6},
     {nombre: "Cartel Neon 7", precio: 25999, id:7},
-    
 ];
-
 let carrito = []
 
 let seleccion = prompt ("¿Desea adquirir algún producto?")
@@ -29,7 +27,7 @@ if (seleccion == "si"){
 }
 
 while (seleccion != "no"){
-    let producto = prompt("indica el numero del cartel elegido");
+    let producto = prompt ("indica el numero del cartel elegido");
     let precio = 0;
 
         switch (producto) {
@@ -66,12 +64,16 @@ while (seleccion != "no"){
                 let producto = prompt("indica el numero del cartel elegido");
     }
 
-    let unidades = parseInt (prompt ("Ingrese la cantidad de unidades"))
+    function agregarCarrito(){
         carrito.push({producto, unidades, precio});
         console.log(carrito);
+    }
+
+    let unidades = parseInt (prompt ("Ingrese la cantidad de unidades"))
+    agregarCarrito();
 
     let finalizar = prompt ("Por favor escribe si para finalizar la compra");
-
+    
     while (finalizar === "si"){
         alert ("Gracias por su compra, este es el resumen de su compra:");
         carrito.forEach(carritoCo =>{
@@ -79,5 +81,13 @@ while (seleccion != "no"){
         });
         break;
     }
+    function error(){
+        alert("el parametro ingresado es incorrecto");
+    }
+    if (finalizar != "si"){
+        error();
+        let finalizar= prompt ("¿Desea finalizar la compra?");
+    }
+    
     break;
 }
